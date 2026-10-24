@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>スラチーファンクラブ 公式サイト</title>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -18,16 +17,6 @@
       background-color: #f4f7f9;
       color: #333333;
       padding-bottom: 60px;
-    }
-
-    #confetti-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 2000;
     }
 
     header {
@@ -880,8 +869,6 @@
 </head>
 <body>
 
-  <canvas id="confetti-canvas"></canvas>
-
   <div id="cart-toast">
     <div class="toast-thumb" id="toastThumb"></div>
     <div class="toast-body">
@@ -1128,7 +1115,7 @@
 
   <div id="reveal-modal">
     <div class="reveal-content">
-      <div class="reveal-title" id="revealTitle">🎉 準備中大成功！</div>
+      <div class="reveal-title" id="revealTitle">準備中</div>
       <p class="reveal-desc" id="revealDesc">
         スラチーファンクラブ公式特設サイトへようこそ！<br>
         スラチーお前の方が借り多いけどありがとう！
@@ -1353,21 +1340,10 @@
       document.getElementById('image-modal').style.display = 'none';
     }
 
-    const confettiCanvas = document.getElementById('confetti-canvas');
-    const myConfetti = confetti.create(confettiCanvas, {
-      resize: true,
-      useWorker: true
-    });
-
     function showJoke(customText) {
       document.getElementById('revealTitle').innerText = '準備中';
       document.getElementById('revealDesc').innerHTML = customText || 'スラチーファンクラブ公式特設サイトへようこそ！<br>スラチーお前の方が借り多いけどありがとう！';
       document.getElementById('reveal-modal').style.display = 'flex';
-      myConfetti({
-        particleCount: 160,
-        spread: 85,
-        origin: { y: 0.6 }
-      });
     }
 
     function closeJoke() {
