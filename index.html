@@ -513,7 +513,11 @@
       overflow: hidden;
       flex-shrink: 0;
       background: rgba(255, 255, 255, 0.15);
-      font-size: 20px;
+    }
+    .sns-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .sns-text-group {
       display: flex;
@@ -1044,7 +1048,9 @@
 
         <a href="https://youtube.com/@suraimu830?si=N-gRs1vZl1YXT8Br" target="_blank" rel="noopener noreferrer" class="sns-card sns-card-youtube">
           <div class="sns-left">
-            <div class="sns-icon">▶️</div>
+            <div class="sns-icon">
+              <img src="images.png" alt="YouTube" onerror="this.parentElement.innerText='▶️'">
+            </div>
             <div class="sns-text-group">
               <span class="sns-name">YouTube</span>
               <span class="sns-id">スラチー公式チャンネル</span>
@@ -1058,7 +1064,9 @@
 
         <a href="https://www.tiktok.com/@suraimu_dayo?_r=1&_t=ZS-9Aop1HQiOa9" target="_blank" rel="noopener noreferrer" class="sns-card sns-card-tiktok">
           <div class="sns-left">
-            <div class="sns-icon">🎵</div>
+            <div class="sns-icon">
+              <img src="tiktok.png" alt="TikTok" onerror="this.parentElement.innerText='🎵'">
+            </div>
             <div class="sns-text-group">
               <span class="sns-name">TikTok</span>
               <span class="sns-id">@suraimu_dayo</span>
